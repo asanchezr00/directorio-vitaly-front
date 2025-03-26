@@ -1,0 +1,62 @@
+<div class="barra-busqueda">
+  <h1>Buscador de Empleados</h1>
+
+  <p class="descripcion">
+    Seleccione el centro o departamento sobre el cual desea buscar. Para localizar a un empleado concreto busque por apellidos.
+  </p>
+  <p class="nota">Se aplicarán todos los filtros que seleccione.</p>
+
+  <div class="filtros-container">
+    <div class="filtro">
+      <label>Centro:</label>
+      <select [(ngModel)]="centroSeleccionado">
+        <option [value]="0">Todos los centros</option>
+        <option *ngFor="let centro of centros" [value]="centro.idCentro">
+          {{centro.nombreCentro}}
+        </option>
+      </select>
+    </div>
+
+    <div class="filtro">
+      <label>Departamento:</label>
+      <select [(ngModel)]="departamentoSeleccionado">
+        <option [value]="0">Todos los departamentos</option>
+        <option *ngFor="let dept of departamentos" [value]="dept.idDepartamento">
+          {{dept.nombreDepartamento}}
+        </option>
+      </select>
+    </div>
+
+    <div class="filtro">
+      <label>Filtrar Apellidos:</label>
+      <input type="text"
+             [(ngModel)]="apellidos"
+             placeholder="Martinez">
+    </div>
+
+    <button class="btn-filtrar" (click)="filtrar()">
+      <i class="fas fa-filter"></i> Filtrar
+    </button>
+  </div>
+
+  <div class="wheel-and-hamster" *ngIf="isLoading">
+    <div class="wheel"></div>
+    <div class="hamster">
+      <div class="hamster__body">
+        <div class="hamster__head">
+          <div class="hamster__ear"></div>
+          <div class="hamster__eye"></div>
+          <div class="hamster__nose"></div>
+        </div>
+        <div class="hamster__limb hamster__limb--fr"></div>
+        <div class="hamster__limb hamster__limb--fl"></div>
+        <div class="hamster__limb hamster__limb--br"></div>
+        <div class="hamster__limb hamster__limb--bl"></div>
+        <div class="hamster__tail"></div>
+      </div>
+    </div>
+    <div class="spoke"></div>
+  </div>
+</div>
+
+

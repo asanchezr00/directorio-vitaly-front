@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Lista de Empleados</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Centro</th>
+        <th>Departamento</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <td><img [src]="empleado.img" alt="estado empleado" width="24" height="24"></td>
+        <td>{{empleado.empleado}}</td>
+        <td>{{empleado.centro}}</td>
+        <td>{{empleado.departamento}}</td>
+        <td>{{empleado.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

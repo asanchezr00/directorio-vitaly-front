@@ -1,0 +1,46 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Previene el scroll horizontal */
+  width: 100%;
+}
+
+.navbar {
+
+  height: 60px;
+  background-color: #990066; /* Color de fondo */
+  color: white; /* Color del texto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+}
+
+.usuario span {
+  margin-right: 10px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 5px;
+}
